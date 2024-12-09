@@ -1,0 +1,126 @@
+/* Fuentes y reseteo */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    /* Se elimina el overflow: hidden para permitir el desplazamiento */
+  }
+  
+  /* Eslogan */
+  .header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #1b1000, #ff3c00);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+  }
+  
+  .header p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px; /* Más separación entre secciones */
+    padding: 40px;
+  }
+  
+  /* Secciones individuales */
+  .section {
+    width: 550px; /* Tamaño más grande para los recuadros */
+    position: relative; /* Necesario para posicionar las imágenes fuera del recuadro */
+    text-align: center;
+    padding: 50px; /* Ajustar el padding para más espacio */
+    background-color: #111; /* Fondo del recuadro */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .section:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Glow más intenso */
+  }
+  
+  /* Ajustes de las imágenes fuera del recuadro */
+  .logo {
+    width: 120px; /* Tamaño ajustado de las imágenes */
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Para centrar verticalmente las imágenes */
+  }
+  
+  .html-logo {
+    left: -170px; /* Mover el logo de HTML a la izquierda */
+  }
+  
+  .css-logo {
+    left: -170px; /* Mover el logo de CSS a la izquierda */
+  }
+  
+  .svg-logo {
+    right: -170px; /* Mover el logo de SVG a la derecha */
+  }
+  
+  /* Botones */
+  a.btn, .btn-download {
+    padding: 12px 25px;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  a.btn:hover, .btn-download:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  /* Descripciones */
+  .description {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ccc;
+  }
+  
+  /* Cursor con estela */
+  body::after {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 1000;
+    animation: followCursor 0.05s linear infinite;
+  }
+  
+  @keyframes followCursor {
+    from {
+      transform: translate(var(--x, 0), var(--y, 0));
+    }
+    to {
+      transform: translate(var(--xEnd, 0), var(--yEnd, 0));
+    }
+  }
+  
